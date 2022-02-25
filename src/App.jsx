@@ -57,19 +57,6 @@ function App() {
     ]);
   };
 
-  const onSelectOwnImage = (e) => {
-    const reader = new FileReader();
-    reader.addEventListener("load", () => {
-      setOwnImageSrc(() => reader.result);
-    });
-    reader.readAsDataURL(
-      new File(
-        ["memexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"],
-        e.target.value
-      )
-    );
-  };
-
   const currentImgPath = () => {
     if (ownImageSrc) return ownImageSrc;
     const imgData = memeData[currentMemeIdx];
