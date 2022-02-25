@@ -48,6 +48,7 @@ button {
 
 .imgContainer {
     position: relative;
+    margin-bottom: 50px;
 }
 
 .meme-text {
@@ -59,11 +60,11 @@ button {
 }
 
 .text1 {
-    top: 20px;
+    top: 2vh;
     left: 28vw;
 }
 
 .text2 {
-    top: 450px;
+    top: 40vh;
     left: 35vw;
 }
