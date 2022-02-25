@@ -14,10 +14,6 @@ input {
     margin: 10px;
 }
 
-label {
-    margin-left: 30px;
-}
-
 img {
     width: 70vw;
 }
@@ -44,4 +40,30 @@ button {
 
 .navigation {
     padding: 10px;
+}
+
+.input-label {
+    margin-left: 30px;
+}
+
+.imgContainer {
+    position: relative;
+}
+
+.meme-text {
+    position: absolute;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    color: white;
+    text-shadow: 4px 4px 14px black;
+}
+
+.text1 {
+    top: 20px;
+    left: 20vw;
+}
+
+.text2 {
+    top: 300px;
+    left: 50vw;
 }
