@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import Axios from "axios";
 import "./App.css";
+import domtoimage from "dom-to-image";
 
 function App() {
   const [currentMemeIdx, setCurrentMemeIdx] = useState(0);
@@ -49,6 +50,19 @@ function App() {
     setCurrentMemeIdx((prev) => prev + 1);
   };
 
+  const onExport = () => {
+    let imgDiv = document.getElementById("img-container");
+    domtoimage
+      .toPng(imgDiv)
+      .then((url) => {
+        var link = document.createElement("a");
+        link.download = "my-meme.png";
+        link.href = url;
+        link.click();
+      })
+      .catch((e) => console.log(e));
+  };
+
   const handleTextChange = (value, idx) => {
     setTextList((prev) => [
       ...prev.slice(0, idx),
@@ -89,7 +103,7 @@ function App() {
           <button onClick={onRandom}>Random</button>
           <button onClick={onNext}>Next &gt;&gt;</button>
         </div>
-        <div className="imgContainer" {...getRootProps()}>
+        <div id="img-container" {...getRootProps()}>
           <input {...getInputProps()} />
           <label className="meme-text text1">{textList[0]}</label>
           <label className="meme-text text2">{textList[1]}</label>
@@ -97,6 +111,7 @@ function App() {
         </div>
         Drag 'n' drop own image file over the picture.
       </div>
+      <button onClick={onExport}>Export meme image</button>
     </div>
   );
 }

@@ -19,8 +19,9 @@ img {
 }
 
 button {
-    width: 100px;
     margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .App {
@@ -46,7 +47,7 @@ button {
     margin-left: 30px;
 }
 
-.imgContainer {
+#img-container {
     position: relative;
     margin-bottom: 50px;
 }
