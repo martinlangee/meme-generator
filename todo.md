@@ -1,0 +1,8 @@
+- Level 1
+  - Input-elements
+    - Image to display the image from i.e. 'imgflip'
+    - 2 Text-input-fields for the
+      - top meme-text
+      - bottom meme-text
+    - Back + Next-Button to change image
+  - Image-display of the created meme overlayed by the two texts
