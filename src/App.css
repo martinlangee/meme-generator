@@ -15,7 +15,7 @@ input {
 }
 
 img {
-    width: 70vw;
+    width: 50vw;
 }
 
 button {
@@ -60,10 +60,10 @@ button {
 
 .text1 {
     top: 20px;
-    left: 20vw;
+    left: 28vw;
 }
 
 .text2 {
-    top: 300px;
-    left: 50vw;
+    top: 450px;
+    left: 35vw;
 }

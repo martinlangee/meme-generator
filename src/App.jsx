@@ -22,6 +22,11 @@ function App() {
     setCurrentMemeIdx((prev) => prev - 1);
   };
 
+  const onRandom = () => {
+    const newIdx = Math.floor(Math.random() * memeData.length);
+    setCurrentMemeIdx((prev) => newIdx);
+  };
+
   const onNext = () => {
     if (currentMemeIdx >= memeData.count - 1) return;
     setCurrentMemeIdx((prev) => prev + 1);
@@ -62,8 +67,9 @@ function App() {
           />
         </form>
         <div className="navigation">
-          <button onClick={onPrev}>Previous</button>
-          <button onClick={onNext}>Next</button>
+          <button onClick={onPrev}>&lt;&lt; Previous</button>
+          <button onClick={onRandom}>Random</button>
+          <button onClick={onNext}>Next &gt;&gt;</button>
         </div>
         <div className="imgContainer">
           <label className="meme-text text1">{textList[0]}</label>
