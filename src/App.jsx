@@ -11,27 +11,22 @@ function App() {
   const [ownImageSrc, setOwnImageSrc] = useState("");
 
   const getMemeData = () => {
-    Axios.get(`https://api.imgflip.com/get_memes`).then((resp) => {
-      setMemeData(resp.data.data.memes);
-    });
+    Axios.get(`https://api.imgflip.com/get_memes`).then((resp) =>
+      setMemeData(resp.data.data.memes)
+    );
   };
 
-  useEffect(() => {
-    getMemeData();
-  }, []);
+  useEffect(() => getMemeData(), []);
 
   const onDrop = useCallback((acceptedFiles) => {
     const reader = new FileReader();
-
-    reader.onabort = () => console.log("file reading was aborted");
-    reader.onerror = () => console.log("file reading has failed");
-    reader.onload = () => {
-      setOwnImageSrc(() => reader.result);
-    };
+    reader.onabort = () => console.log("File reading was aborted");
+    reader.onerror = () => console.log("File reading has failed");
+    reader.onload = () => setOwnImageSrc(() => reader.result);
     reader.readAsDataURL(acceptedFiles[0]);
   }, []);
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+  const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
   const onPrev = () => {
     if (currentMemeIdx === 0) return;
