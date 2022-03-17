@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# A little exercise using React, Axios, Dropzone and Dom-To-Image
+
+It loads a random meme from --- You can place two meme lyrics on it and then download a screen shot.
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Packages
+
+Install packages after first git pull before first start:
+
+### `npm install`
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
