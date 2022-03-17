@@ -1,4 +1,6 @@
-# A little exercise using React, Axios, Dropzone and Dom-To-Image
+# Meme Generator
+
+A little exercise using React, Axios, Dropzone and Dom-To-Image
 
 It loads a random meme image from imageflip. You can place two meme lyrics on it and then download a screen shot.
 
