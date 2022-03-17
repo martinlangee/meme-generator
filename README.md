@@ -10,21 +10,6 @@ Install packages after first git pull before first start:
 
 ### `npm install`
 
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Used packages
-
-Following packages must be installed after first git pull before first start:
-
-### `npm install react`
-
-### `npm install axios`
-
-### `npm install --save react-dropzone`
-
-### `npm install dom-to-image`
-
 ## Available Scripts
 
 In the project directory, you can run:
