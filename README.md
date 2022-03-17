@@ -1,6 +1,6 @@
 # A little exercise using React, Axios, Dropzone and Dom-To-Image
 
-It loads a random meme from --- You can place two meme lyrics on it and then download a screen shot.
+It loads a random meme image from imageflip. You can place two meme lyrics on it and then download a screen shot.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
